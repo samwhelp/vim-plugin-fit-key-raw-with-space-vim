@@ -27,6 +27,29 @@
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Head: Quit
+""
+
+" ## delete buffer
+nnoremap <Bslash>q :q<CR>    " single
+nnoremap <Bslash>x :qa<CR>   " all
+nnoremap <Bslash>z :q!<CR>   " single
+nnoremap <Bslash>c :qa!<CR>  " all
+
+
+" ## quit
+nnoremap ,q :bdelete<CR>     " single
+nnoremap ,x :%bdelete<CR>    " all
+nnoremap ,z :bdelete!<CR>    " single
+nnoremap ,c :%bdelete!<CR>   " all
+
+
+""
+""" Tail: Quit
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 """ Head: Buffer {
 ""
 
@@ -36,6 +59,17 @@ nnoremap <C-k> :bnext<CR>
 "nnoremap <C-Up> :bprevious<CR>
 "nnoremap <C-Down> :bnext<CR>
 " https://github.com/liuchengxu/space-vim/blob/master/layers/%2Bdistributions/better-defaults/keybindings.vim
+
+
+" ## list buffer
+nnoremap ,b :ls<CR>
+"nnoremap ,b :buffers<CR>
+"nnoremap ,b :files<CR>
+
+
+" ## save
+nnoremap ,s :w<CR>
+
 
 ""
 """ Tail: Buffer }
