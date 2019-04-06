@@ -1,6 +1,13 @@
+
 # vim-plugin-fit-key-raw-with-space-vim
 
 * vim-plugin-fit-key-raw-with-space-vim ([GitHub](https://github.com/samwhelp/vim-plugin-fit-key-raw-with-space-vim))
+
+
+## Browse
+
+* [Quick Switch](#quick-switch)
+* [Howto Install](#howto-install)
 
 
 ## Introduction
