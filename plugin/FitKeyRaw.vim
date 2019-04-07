@@ -27,7 +27,27 @@
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-""" Head: Quit
+""" Head: Option {
+""
+
+" ## for close
+"set confirm
+
+
+" ## :help 'autoread'
+"set autoread
+
+
+" ## for only and tabonly
+"set hidden
+
+""
+""" Tail: Option }
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+""" Head: Quit {
 ""
 
 " ## delete buffer
@@ -45,7 +65,7 @@ nnoremap ,c :%bdelete!<CR>   " all
 
 
 ""
-""" Tail: Quit
+""" Tail: Quit }
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 
@@ -102,6 +122,18 @@ nnoremap ,h :hide<CR>
 """ Head: TabPage {
 ""
 
+" ## <Space><Space> " for tabpage leader
+
+
+" ## switch next or previous
+" default gT for tabprevious
+" default gt for tabnext
+" default <C-PageUp> for tabprevious. but terminal switch tab
+" default <C-PageDown> for tabnext. but terminal switch tab
+nnoremap <Space><Space>p :tabprevious<CR>
+nnoremap <Space><Space>n :tabnext<CR>
+nnoremap <Space><Space>h :tabprevious<CR>
+nnoremap <Space><Space>l :tabnext<CR>
 "nnoremap <C-Left> :tabprevious<CR>
 "nnoremap <C-Right> :tabnext<CR>
 nnoremap <C-h> :tabprevious<CR>
@@ -110,10 +142,79 @@ nnoremap ,u :redraw<CR> "  for orignal <C-l>
 " https://github.com/liuchengxu/space-vim/blob/master/layers/%2Bdistributions/better-defaults/keybindings.vim
 
 
+" ## switch to first or last
+nnoremap <Space><Space>j :tabfirst<CR>
+nnoremap <Space><Space>k :tablast<CR>
 
+
+" https://github.com/liuchengxu/space-vim/blob/master/core/autoload/spacevim/map/leader.vim#L12
+" ## switch to 1~10
+" nnoremap <Space><Space>1 1gt
+" nnoremap <Space><Space>2 2gt
+" nnoremap <Space><Space>3 3gt
+" nnoremap <Space><Space>4 4gt
+" nnoremap <Space><Space>5 5gt
+" nnoremap <Space><Space>6 6gt
+" nnoremap <Space><Space>7 7gt
+" nnoremap <Space><Space>8 8gt
+" nnoremap <Space><Space>9 9gt
+" nnoremap <Space><Space>0 10gt
+
+
+" ## move left or right
+nnoremap <Space><Space>u :-tabmove<CR> " tab move left
+nnoremap <Space><Space>i :+tabmove<CR> " tab move right
+nnoremap <Space><Space>mh :-tabmove<CR> " tab move left
+nnoremap <Space><Space>ml :+tabmove<CR> " tab move right
+
+
+" ## move to first or last
+nnoremap <Space><Space>mj :0tabmove<CR>
+nnoremap <Space><Space>mk :$tabmove<CR>
+
+
+" ## move to 1~10
+nnoremap <Space><Space>m0 :0tabmove<CR>
+nnoremap <Space><Space>m1 :1tabmove<CR>
+nnoremap <Space><Space>m2 :2tabmove<CR>
+nnoremap <Space><Space>m3 :3tabmove<CR>
+nnoremap <Space><Space>m4 :4tabmove<CR>
+nnoremap <Space><Space>m5 :5tabmove<CR>
+nnoremap <Space><Space>m6 :6tabmove<CR>
+nnoremap <Space><Space>m7 :7tabmove<CR>
+nnoremap <Space><Space>m8 :8tabmove<CR>
+nnoremap <Space><Space>m9 :9tabmove<CR>
+
+
+
+" ## open current window to new tabpage
+nnoremap <Space><Space>s :tab split<CR>
+
+
+" ## new tabpage or close
 nnoremap <Space><Space>t :tabnew<CR>
 nnoremap <Space><Space>e :tabedit<Space>
 nnoremap <Space><Space>f :tabnew<CR>:edit<Space>
+"nnoremap <Space><Space>c :tabclose<CR> " space-vim default
+
+
+" ## quit all
+"nnoremap <Space><Space>qa :qa!<CR>
+
+
+" ## close other tabpage
+" use <Space><Space>wa to close other tabpage, then all buffer will hide, if set hidden.
+nnoremap <Space><Space>wa :tabonly<CR>
+" Note:
+" use ,c to delete all buffer, then all tapage will close.
+" use ,wa to close other window, then all buffer will hide, if set hidden.
+" use ,h to hide current buffer, then current tapage will close.
+
+
+" ## show help page
+"nnoremap tb :tabnew<CR>:help<CR><C-w>w:quit!<CR><Esc>
+nnoremap <Space><Space>b :tab help<CR>
+
 
 ""
 """ Tail: TabPage }
