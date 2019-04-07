@@ -41,6 +41,10 @@
 " ## for only and tabonly
 "set hidden
 
+
+" ## add <Bslash> WhichKey Tips. (for \)
+"nnoremap <silent> <Bslash> :<c-u>WhichKey  '<Bslash>'<CR>
+
 ""
 """ Tail: Option }
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
