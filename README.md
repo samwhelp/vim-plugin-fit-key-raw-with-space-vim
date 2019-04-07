@@ -25,7 +25,7 @@ This vim plugin is fit key map for my self with [space-vim](https://github.com/l
 * vim-better-default/plugin/[default.vim](https://github.com/liuchengxu/vim-better-default/blob/master/plugin/default.vim)
 * ...
 
-## Map
+## My Map
 
 > Not all. Just introduction. Please read [plugin/FitKeyRaw.vim](plugin/FitKeyRaw.vim) to find all key map.
 
