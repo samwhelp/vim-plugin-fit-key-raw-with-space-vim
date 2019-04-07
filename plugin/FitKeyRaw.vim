@@ -177,7 +177,7 @@ nnoremap <Space><Space>mj :0tabmove<CR>
 nnoremap <Space><Space>mk :$tabmove<CR>
 
 
-" ## move to 1~10
+" ## n tabmove
 nnoremap <Space><Space>m0 :0tabmove<CR>
 nnoremap <Space><Space>m1 :1tabmove<CR>
 nnoremap <Space><Space>m2 :2tabmove<CR>
@@ -215,7 +215,7 @@ nnoremap <Space><Space>wa :tabonly<CR>
 " use ,h to hide current buffer, then current tapage will close.
 
 
-" ## show help page
+" ## show help page on new tab
 "nnoremap tb :tabnew<CR>:help<CR><C-w>w:quit!<CR><Esc>
 nnoremap <Space><Space>b :tab help<CR>
 
