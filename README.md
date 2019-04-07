@@ -96,3 +96,16 @@ $ vim -nNRe -c ':PlugInstall'
 ```
 
 It's done.
+
+
+or can run
+
+``` sh
+$ vim -nNRe +PlugInstall +qa!
+```
+
+or can run
+
+``` sh
+$ vim -nNRe +PlugInstall
+```
